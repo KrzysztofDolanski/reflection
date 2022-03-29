@@ -10,7 +10,7 @@ public class MainTest {
     
     
     @Test
-    void shouldReturnBark() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+    void shouldReturnBark(){
     // Given
         AnimalsReflection animalsReflection = new AnimalsReflection();
     // When
@@ -19,5 +19,14 @@ public class MainTest {
         assertEquals(bark, "hau");
     }
 
+    @Test
+    void shouldReturnClassName() throws ClassNotFoundException {
+    // Given
+        AnimalsReflection animalsReflection = new AnimalsReflection();
+    // When
+        String innerClassChihuahua = animalsReflection.getInnerClassChihuahua();
+        // Then
+        assertEquals(innerClassChihuahua, "Chihuahua");
+    }
 
 }

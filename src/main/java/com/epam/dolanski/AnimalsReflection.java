@@ -1,5 +1,6 @@
 package com.epam.dolanski;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -18,8 +19,12 @@ public class AnimalsReflection {
             bark.setAccessible(true);
             result += (String) bark.invoke(dog);
         } catch (IllegalAccessException | InvocationTargetException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
         return result;
+    }
+
+    public String getInnerClassChihuahua() throws ClassNotFoundException {
+       return "";
     }
 }
