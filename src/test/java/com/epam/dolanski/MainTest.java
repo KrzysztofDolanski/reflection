@@ -28,9 +28,18 @@ public class MainTest {
     }
 
     @Test
-    void shouldReturnNameOfMethodInDogInnerClass() {
+    void shouldReturnNameOfFieldsInDogInnerClass() {
         // Given
+        AnimalsReflection animalsReflection = new AnimalsReflection();
         // When
+        String[] expected = {"legs", "speed", "height"};
+        String[] names = animalsReflection.getNamesOfFields();
         // Then
+        assertEquals(names, expected);
+    }
+
+    @Test
+    void shouldReturnComeOfFieldsInConstructorOfInnerClass(){
+
     }
 }

@@ -15,9 +15,16 @@ class Dog {
         return "hau";
     }
 
-
-
     private class Chihuahua{
-        //todo make some test
+
+        public Chihuahua(Integer legs, Long speed) {
+            this.legs = legs;
+            this.speed = speed;
+            height = 26.4;;
+        }
+
+        private Integer legs = 4;
+        private Long speed  = 20L;
+        private final Double height;
     }
 }
