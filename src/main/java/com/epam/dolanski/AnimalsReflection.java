@@ -1,10 +1,9 @@
 package com.epam.dolanski;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.lang.reflect.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class AnimalsReflection {
 
@@ -42,7 +41,12 @@ public class AnimalsReflection {
         return fieldsNames;
     }
 
-    public String[] getFieldsFromConstructor(){
-        return new String[1];
+    public List<String> getParametersOfConstructor() {
+        List<String> result = new ArrayList<>();
+        Constructor<?> declaredConstructor = Dog.class.getDeclaredClasses()[0].getDeclaredConstructors()[0];
+        for (Parameter parameter : declaredConstructor.getParameters()) {
+            result.add(parameter.getType().getSimpleName());
+        }
+        return result;
     }
 }

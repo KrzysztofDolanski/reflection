@@ -20,7 +20,8 @@ class Dog {
         public Chihuahua(Integer legs, Long speed) {
             this.legs = legs;
             this.speed = speed;
-            height = 26.4;;
+            height = 26.4;
+            int something = 1;
         }
 
         private Integer legs = 4;

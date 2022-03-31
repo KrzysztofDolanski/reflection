@@ -2,6 +2,8 @@ package com.epam.dolanski;
 
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.testng.Assert.assertEquals;
 
 public class MainTest {
@@ -31,15 +33,21 @@ public class MainTest {
     void shouldReturnNameOfFieldsInDogInnerClass() {
         // Given
         AnimalsReflection animalsReflection = new AnimalsReflection();
-        // When
         String[] expected = {"legs", "speed", "height"};
+        // When
         String[] names = animalsReflection.getNamesOfFields();
         // Then
         assertEquals(names, expected);
     }
 
     @Test
-    void shouldReturnComeOfFieldsInConstructorOfInnerClass(){
-
+    void shouldReturnNameOfFieldsInConstructorOfInnerClass(){
+        AnimalsReflection animalsReflection = new AnimalsReflection();
+        List<String> expected = List.of("Dog",
+                "Integer",
+                "Long"
+        );
+        List<String> parametersOfmConstructor = animalsReflection.getParametersOfConstructor();
+        assertEquals(parametersOfmConstructor, expected);
     }
 }
