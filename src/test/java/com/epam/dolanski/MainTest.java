@@ -1,5 +1,6 @@
 package com.epam.dolanski;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -9,10 +10,16 @@ import static org.testng.Assert.assertEquals;
 public class MainTest {
 
 
+    AnimalsReflection animalsReflection;
+
+    @BeforeMethod
+    void setup() {
+        animalsReflection = new AnimalsReflection();
+    }
+
     @Test
     void shouldReturnBark() {
         // Given
-        AnimalsReflection animalsReflection = new AnimalsReflection();
         // When
         String bark = animalsReflection.barkFromDog();
         // Then
@@ -22,7 +29,6 @@ public class MainTest {
     @Test
     void shouldReturnClassName() throws ClassNotFoundException {
         // Given
-        AnimalsReflection animalsReflection = new AnimalsReflection();
         // When
         String innerClassChihuahua = animalsReflection.getDogInnerClassName();
         // Then
@@ -32,7 +38,6 @@ public class MainTest {
     @Test
     void shouldReturnNameOfFieldsInDogInnerClass() {
         // Given
-        AnimalsReflection animalsReflection = new AnimalsReflection();
         String[] expected = {"legs", "speed", "height"};
         // When
         String[] names = animalsReflection.getNamesOfFields();
@@ -41,13 +46,22 @@ public class MainTest {
     }
 
     @Test
-    void shouldReturnNameOfFieldsInConstructorOfInnerClass(){
-        AnimalsReflection animalsReflection = new AnimalsReflection();
+    void shouldReturnNameOfFieldsInConstructorOfInnerClass() {
         List<String> expected = List.of("Dog",
                 "Integer",
                 "Long"
         );
         List<String> parametersOfmConstructor = animalsReflection.getParametersOfConstructor();
         assertEquals(parametersOfmConstructor, expected);
+    }
+
+    @Test
+    void shouldShowAnnotation() {
+        // Given
+        List<String> expected = List.of("Deprecated", "DataAmount");
+        // When
+        List<String> annotations = animalsReflection.getAnnotations();
+        // Then
+        assertEquals(annotations, expected);
     }
 }

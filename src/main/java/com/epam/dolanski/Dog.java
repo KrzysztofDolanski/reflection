@@ -1,7 +1,12 @@
 package com.epam.dolanski;
 
+import jdk.jfr.DataAmount;
+import jdk.jfr.Enabled;
+import jdk.jfr.Experimental;
+
 class Dog {
 
+    boolean letHimBark = true;
 
     public String squeak(){
         return "piiiii";
@@ -22,6 +27,17 @@ class Dog {
             this.speed = speed;
             height = 26.4;
             int something = 1;
+        }
+
+        @Deprecated
+        private void chain(Dog dog){
+            dog.letHimBark = false;
+        }
+
+
+        @DataAmount
+        private void runFaster(){
+            speed++;
         }
 
         private Integer legs = 4;

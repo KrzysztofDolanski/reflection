@@ -1,5 +1,6 @@
 package com.epam.dolanski;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +15,7 @@ public class AnimalsReflection {
         try {
             bark = Dog.class.getDeclaredMethod("bark");
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
         }
         try {
             bark.setAccessible(true);
@@ -46,6 +47,19 @@ public class AnimalsReflection {
         Constructor<?> declaredConstructor = Dog.class.getDeclaredClasses()[0].getDeclaredConstructors()[0];
         for (Parameter parameter : declaredConstructor.getParameters()) {
             result.add(parameter.getType().getSimpleName());
+        }
+        return result;
+    }
+
+
+    public List<String> getAnnotations() {
+        List<String> result = new ArrayList<>();
+        for (Class<?> declaredClass : Dog.class.getDeclaredClasses()) {
+            for (Method declaredMethod : declaredClass.getDeclaredMethods()) {
+                for (Annotation annotation : declaredMethod.getAnnotations()) {
+                    result.add(annotation.annotationType().getSimpleName());
+                }
+            }
         }
         return result;
     }
