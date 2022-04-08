@@ -4,14 +4,15 @@
 
 
 * [Overview](#overview)
-* [Methods and class](#methods and class)
+* [Classes](#classes)
+* [Methods](#methods)
 * [Constructors](#constructors)
 * [Fields](#fields)
 * [Usages](#usages)
 
 
 
-##Overview
+## Overview
 ```
 The reflection classes, such as Method, are found in java.lang.reflect. 
 There are three steps that must be followed to use these classes. 
@@ -21,19 +22,23 @@ in a running Java program.
 ```
 
 
-##Methods and class
+## Classes
+
+
+
+## Methods
 
 
 
 
-##Constructors
+## Constructors
 
 
 
 
-##Fields
+## Fields
 
 
 
 
-##Usages
+## Usages
