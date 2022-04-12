@@ -1,11 +1,14 @@
 package com.epam.dolanski;
 
+import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotNull;
 
 public class MainTest {
 
@@ -47,10 +50,8 @@ public class MainTest {
 
     @Test
     void shouldReturnNameOfFieldsInConstructorOfInnerClass() {
-        List<String> expected = List.of("Dog",
-                "Integer",
-                "Long"
-        );
+        List<String> expected = List.of("Dog", "Integer", "Long");
+        expected.stream().collect(Collectors.partitioningBy(x->expected.indexOf(x)%3==0)).values();
         List<String> parametersOfmConstructor = animalsReflection.getParametersOfConstructor();
         assertEquals(parametersOfmConstructor, expected);
     }
@@ -63,5 +64,21 @@ public class MainTest {
         List<String> annotations = animalsReflection.getAnnotations();
         // Then
         assertEquals(annotations, expected);
+    }
+
+    private Class<?> animal;
+
+    @BeforeGroups
+    public void setup2(){
+        try {
+            animal = Class.forName("com.epam.dolanski.Animal");
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage() + "Class don't exists");
+        }
+    }
+
+    @Test
+    void animalClassShouldNotExist(){
+        assertNotNull(animal);
     }
 }
