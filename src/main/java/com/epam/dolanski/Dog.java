@@ -1,8 +1,6 @@
 package com.epam.dolanski;
 
 import jdk.jfr.DataAmount;
-import jdk.jfr.Enabled;
-import jdk.jfr.Experimental;
 
 class Dog {
 
@@ -22,6 +20,8 @@ class Dog {
 
     private class Chihuahua{
 
+        @DogName(name = "chihuahua")
+        @DogColour(colour = "blue")
         public Chihuahua(Integer legs, Long speed) {
             this.legs = legs;
             this.speed = speed;
