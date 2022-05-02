@@ -1,0 +1,16 @@
+Dzięki refleksji mozemy dynamicznie uzyskiwać informacje o funkcjonalnościach dodawanych klas.
+
+Program, który może analizować funkcjonalność klas, nazywa się programem refleksyjnym.
+
+Zastosowania mechanizmu refleksji:
+1. Analiza właściwości klasy w trakcie działanie programu.
+2. Inspekcja obiektów w czasie działania programu.
+3. Implementacja generycznego kodu manipulującego tablicami.
+4. Wykorzystanie obiektów Method.
+
+Refleksja to wszechstronny i skomplikowany mechanizm. Jest interesująca przede wszystkim dla twórców narzędzi, mniej dla programistów aplikacji.
+
+W pierwszej cześci nauczymy się sprawdzać nazwy i typy pól, metod, konstruktorów oraz rodziców danej klasy.
+
+W drugiej pójdziemy trochę dalej i dobierzemy się do zawartości pól.
+(refleksja umożliwia nam uzyskanie informacji o polach obiektów, które w czasie kompilacji nie były jeszcze znane)
