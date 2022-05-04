@@ -1,0 +1,9 @@
+=== Class
+
+Każdy typ jest referencją lub prymitywem.
+Klasy, wyliczenia i tablice (które wszystkie dziedziczą po java.lang.Object), a także interfejsy są typami referencyjnymi.
+Przykłady typów referencyjnych obejmują java.lang.String wszystkie klasy opakowujące dla typów pierwotnych, takich jak java.lang.Double,interfejs java.io.Serializablei, enum, javax.swing.SortOrder.
+Istnieje stały zestaw typów pierwotnych: boolean, byte, short, int, long, char, floati double.
+
+Dla każdego typu obiektu maszyna wirtualna Java tworzy instancję niezmienną, java.lang.Classktóra zapewnia metody badania właściwości środowiska wykonawczego obiektu, w tym jego elementów członkowskich i informacji o typie.
+Class zapewnia również możliwość tworzenia nowych klas i obiektów. *Co najważniejsze, jest to punkt wejścia dla wszystkich interfejsów API Reflection.*
