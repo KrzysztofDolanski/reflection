@@ -6,19 +6,23 @@ class Dog {
 
     boolean letHimBark = true;
 
-    public String squeak(){
+    public String squeak() {
         return "piiiii";
     }
 
-    String howls(){
+    String howls() {
         return "wuuuuoooo";
     }
 
-    private String bark(){
+    private String bark() {
         return "hau";
     }
 
-    private class Chihuahua{
+    private class Chihuahua {
+
+        private Integer legs = 4;
+        private Long speed = 20L;
+        private final Double height;
 
         @DogName(name = "chihuahua")
         @DogColour(colour = "blue")
@@ -29,19 +33,20 @@ class Dog {
             int something = 1;
         }
 
+        public Chihuahua() {
+            height = 0.0;
+        }
+
         @Deprecated
-        private void chain(Dog dog){
+        private void chain(Dog dog) {
             dog.letHimBark = false;
         }
 
 
         @DataAmount
-        private void runFaster(){
+        private void runFaster() {
             speed++;
         }
 
-        private Integer legs = 4;
-        private Long speed  = 20L;
-        private final Double height;
     }
 }

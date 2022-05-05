@@ -7,8 +7,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.*;
 
 public class MainTest {
 
@@ -80,5 +79,12 @@ public class MainTest {
     @Test
     void animalClassShouldNotExist(){
         assertNotNull(animal);
+    }
+
+
+    @Test
+    void shouldReturnChihuahuaClass(){
+        Object constructor = animalsReflection.getConstructor();
+        assertTrue(constructor.toString().contains("Chihuahua"));
     }
 }

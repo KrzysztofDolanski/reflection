@@ -63,4 +63,22 @@ public class AnimalsReflection {
         }
         return result;
     }
+
+    //todo This is not working. Get to inner class is not so simple.
+    public Object getConstructor() {
+        Constructor<?> constructor;
+
+        Object instanceChihuahua = null;
+        Class<?>[] declaredClasses = Dog.class.getDeclaredClasses();
+       for (Class<?> declaredClass : declaredClasses) {
+            try {
+                constructor = declaredClass.getClassLoader().loadClass("Chihuahua").getConstructor();
+                instanceChihuahua = constructor.newInstance();
+            } catch (NoSuchMethodException | InvocationTargetException | InstantiationException |
+                     IllegalAccessException | ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+       }
+        return instanceChihuahua;
+    }
 }

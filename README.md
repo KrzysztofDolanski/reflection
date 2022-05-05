@@ -59,26 +59,54 @@ How do you test a class that doesn't exist?
 
 
 
-# Annotations
+# Adnotacje
 ````````
-Annotations, a form of metadata, provide data about a program that is not part of the program itself. 
-Annotations have no direct effect on the operation of the code they annotate.
-Annotations have a number of uses, among them:
+   
+Adnotacje, forma metadanych, które wprowadzają dane o programie ale nie zmieniają działania poszczególnych części programu.
+Adnotacje nie wpływają bezpośrednio na efekt operacji kodu, który pokrywają.
+Adnotacje mają wiele właściwości:
+    Są informacją dla kompilatora - adnotacje mogą być użyteczne dla kompilatora w celu wykrywanie błędów lub pomijania ostrzeżeń (SupressWarnings).
+    Czas kompilacji oraz czas procesu tworzenia aplikacji - frameworki potrafią używać adnotacji w celu generowania kodu, plików XML.
+    Niektóre adnotacje mogą zostać użyte już podczas działania programu (Runtime).
 
-    Information for the compiler — Annotations can be used by the compiler to detect errors or suppress warnings.
-    Compile-time and deployment-time processing — Software tools can process annotation information to generate code, XML files, and so forth.
-    Runtime processing — Some annotations are available to be examined at runtime.
 
-This lesson explains where annotations can be used, how to apply annotations, what predefined annotation types 
-are available in the Java Platform, Standard Edition (Java SE API), how type annotations can be used in conjunction with 
-pluggable type systems to write code with stronger type checking, and how to implement repeating annotations.
 ````````
-## Predefined Annotation Types
-A set of annotation types are predefined in the Java SE API. Some annotation types are used by the Java compiler, and some apply to other annotations.
-Annotations can be applied to declarations: declarations of classes, fields, methods, and other program elements.
-Some annotation types are used by the Java compiler, and some apply to other annotations.
+Adnotacje są znacznikami.
+Adnotacje nie zmieniają sposobu kompilacji programu.
+Do najważniejszych zastosowań adnotacji należą:
+- Automatyczne generowanie plików pomocniczych takich jak deskryptory wdrożeń 
+(web.xml) (adnotacje zastępują konieczność tworzenia pliku) lub klasy informacyjne ziarenek.
+- Automatyczne generowanie kodu do testowania, zapisu informacji w dziennikach, semantyki trancakcji.
+
+Oprócz metod adnotacjami możemy oznaczyć również klasy, pola i zmienne lokalne.
+
+Tworząc adnotację należy zdefiniować interfejs adnotacji. Metody tego interfejsu odpowiadają elemenom adnotacij.
+
+``````````
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Name 
+{
+Long timeout() default 0L;
+}
+``````````
+
+Deklaracja @interface tworzy interfejs. Narzędzia, które przetwarzają adnotacje, otrzymują obiekty implementujące interfejs adnotacij. 
+Narzędzie wywoła metodę timeout aby pobrać element wybranej adnotacji Name.
+
+Adnotacje Target i Retention są metaadnotacjami. Pierwsza ogranicza elementy, dla których można użyc adnotacji.
+Druga określa sposób zachowania adnotacji, który określamy za pomocą co najmniej jednej wartości spośród:
+- SOURCE - adnotacje są zachowywane w plikach klas
+- CLASS - adnotacje są zachowywane w plikach klas, ale nie są ładowane przez maszynę wirtualną.
+- RUNTIME - adnotacje są zachowywane w plikach klas i są ładowane przez maszynę wirtualną. Są wtedy dostępne za pomocą
+interfejsu refleksji.
+
+## Ustalone adnotacje
+Istnieje zbiór adnotacji w JAVA SE API. Niektóre z nich używane są przez kompilator a niektóre używane są przez inne adnotacje.
+Adnotacje mogą być użyte co do: klasy, pola, metody oraz pozotałych elementów programu (wartości metod)
 
 @Deprecated
 @Override
 @SuppressWarnings
+
 
