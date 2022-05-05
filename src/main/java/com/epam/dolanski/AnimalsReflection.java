@@ -52,6 +52,7 @@ public class AnimalsReflection {
     }
 
 
+    @Deprecated
     public List<String> getAnnotations() {
         List<String> result = new ArrayList<>();
         for (Class<?> declaredClass : Dog.class.getDeclaredClasses()) {
@@ -81,4 +82,5 @@ public class AnimalsReflection {
        }
         return instanceChihuahua;
     }
+
 }
