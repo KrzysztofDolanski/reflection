@@ -154,6 +154,8 @@ Domyślna wartość podana w deklaracji jest używana, jesli wartość elementu 
 Jeśli nie podajemy żadnych elementów używane są wartości domyślne a taką wersję nazywamy
 adnotacją znacznikową.
 
+![annotation types](src/main/resources/img_1.png)
+
 ## Kategorie adnotaci
 #### DEKLARACJI:
 Udostępniają pewne informacje na temat deklarowanego elementu.
@@ -179,10 +181,13 @@ Adnotacje zastosowania ytpu można umieszczać w nastepujących miejscach:
 Istnieje zbiór adnotacji w JAVA SE API. Niektóre z nich używane są przez kompilator a niektóre używane są przez inne adnotacje.
 Adnotacje mogą być użyte co do: klasy, pola, metody oraz pozotałych elementów programu (wartości metod)
 ````
+@SuppressWarnings
 @Deprecated
 @Override
-@SuppressWarnings
 ````
+
+Domyślnie adnotacje nie sa dziedziczone. Należy użyć `````` @Inherited`````` aby mogły byc dziedziczone przez dzieci.
+
 # Zadanie
 Spojrzeź na adnotacje w pakietach:
 - pakiet: java.lang
