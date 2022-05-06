@@ -60,6 +60,14 @@ How do you test a class that doesn't exist?
 
 
 # Adnotacje
+![2](src/main/resources/road_map.png)
+
+| ![3](src/main/resources/google_web_toolkit.png) | ![4](src/main/resources/grails.png) | ![5](src/main/resources/hibernate.png) |
+|-------------------------------------------------|-------------------------------------|----------------------------------------|
+| ![6](src/main/resources/junit.png)              | ![3](src/main/resources/lombok.png) | ![3](src/main/resources/mockito.png)   |
+| ![6](src/main/resources/spring.png)             | ![6](src/main/resources/strus.png)  | ![6](src/main/resources/testng.png)    |
+| ![6](src/main/resources/vaadin.png)             |
+
 ````````
 Adnotacje, forma metadanych, które wprowadzają dane o programie ale nie zmieniają działania poszczególnych części programu.
 Adnotacje nie wpływają bezpośrednio na efekt operacji kodu, który pokrywają.
