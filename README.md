@@ -138,7 +138,7 @@ Adnotacje mogą być użyte co do: klasy, pola, metody oraz pozotałych element�
 Domyślnie adnotacje nie sa dziedziczone. Należy użyć `````` @Inherited`````` aby mogły byc dziedziczone przez dzieci.
 
 # Zadanie
-Spojrzeź na adnotacje w pakietach:
+Otwórz poniższe pakiety i przeglądnij adnotacje:
 - pakiet: java.lang
 - pakiet java.lang.annotation
 
