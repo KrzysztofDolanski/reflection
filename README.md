@@ -1,6 +1,5 @@
 # Adnotacje
 
-![2](src/main/resources/road_map.png)
 
 | ![3](src/main/resources/google_web_toolkit.png) | ![4](src/main/resources/grails.png) | ![5](src/main/resources/hibernate.png) |
 |-------------------------------------------------|-------------------------------------|----------------------------------------|
