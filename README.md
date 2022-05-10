@@ -1,65 +1,5 @@
-# Reflection in java  ![java reflection](src/main/resources/img.png)
-
-## Table of contents
-
-
-* [Overview](#overview)
-* [Purpose of reflection](#Purpose of reflection)
-* [Classes](#classes)
-* [Methods](#methods)
-* [Constructors](#constructors)
-* [Fields](#fields)
-* [Usages](#usages)
-
-
-
-## Overview
-```
-The reflection classes, such as Method, are found in java.lang.reflect. 
-There are three steps that must be followed to use these classes. 
-The first step is to obtain a java.lang.Class object for the class that 
-you want to manipulate. java.lang.Class is used to represent classes and interfaces 
-in a running Java program.
-```
-<i>Package java.lang.reflect
-
-<q>Classes
-
-| [AccessibleObject](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/AccessibleObject.html) |    [Array](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Array.html)    | [Constructor](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Constructor.html) | [Executable](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Executable.html) |[Field](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html) |
-|-------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------:|--------------------------------------------------------------------------------------------------------:|
-| [Method](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Method.html)                     | [Modifier](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Modifier.html) |   [Parameter](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Parameter.html)   |      [Proxy](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Proxy.html)      | [ReflectPermission](https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/ReflectPermission.html) |
-
-
-
-## Purpose of reflection
-How do you test a class that doesn't exist?
-
-
-
-## Classes
-
-
-
-## Methods
-
-
-
-
-## Constructors
-
-
-
-
-## Fields
-
-
-
-
-## Usages
-
-
-
 # Adnotacje
+
 ![2](src/main/resources/road_map.png)
 
 | ![3](src/main/resources/google_web_toolkit.png) | ![4](src/main/resources/grails.png) | ![5](src/main/resources/hibernate.png) |
@@ -67,6 +7,8 @@ How do you test a class that doesn't exist?
 | ![6](src/main/resources/junit.png)              | ![3](src/main/resources/lombok.png) | ![3](src/main/resources/mockito.png)   |
 | ![6](src/main/resources/spring.png)             | ![6](src/main/resources/strus.png)  | ![6](src/main/resources/testng.png)    |
 | ![6](src/main/resources/vaadin.png)             |
+
+https://www.edureka.co/blog/java-frameworks/
 
 ````````
 Adnotacje, forma metadanych, które wprowadzają dane o programie ale nie zmieniają działania poszczególnych części programu.
@@ -161,7 +103,7 @@ Kolejność elementów nie ma znaczenia.
 Domyślna wartość podana w deklaracji jest używana, jesli wartość elementu nie została podana.
 Jeśli nie podajemy żadnych elementów używane są wartości domyślne a taką wersję nazywamy
 adnotacją znacznikową.
-
+https://www.edureka.co/blog/java-frameworks/
 ![annotation types](src/main/resources/img_1.png)
 
 ## Kategorie adnotaci

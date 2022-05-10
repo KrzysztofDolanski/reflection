@@ -1,4 +1,4 @@
-package com.epam.dolanski;
+package com.epam.dolanski.refleksja;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.*;

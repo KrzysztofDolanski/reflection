@@ -1,5 +1,6 @@
 package com.epam.dolanski;
 
+import com.epam.dolanski.refleksja.AnimalsReflection;
 import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -70,7 +71,7 @@ public class MainTest {
     @BeforeGroups
     public void setup2(){
         try {
-            animal = Class.forName("com.epam.dolanski.Animal");
+            animal = Class.forName("com.epam.dolanski.refleksja.Animal");
         } catch (ClassNotFoundException e) {
             System.out.println(e.getMessage() + "Class don't exists");
         }

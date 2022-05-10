@@ -1,4 +1,4 @@
-package com.epam.dolanski;
+package com.epam.dolanski.refleksja;
 
 import jdk.jfr.DataAmount;
 
