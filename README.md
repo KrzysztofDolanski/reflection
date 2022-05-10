@@ -94,7 +94,7 @@ String[] owners();
 ``````
 
 ## Użycie adnotacji
-Każda a@Localizeddnotacja posiada format:
+Każda adnotacja posiada format:
 ````````
 @NazwaAdnotacji(name: "Mariusz", legNumber: 4)
 ````````
@@ -117,7 +117,7 @@ Udostępniają pewne informacje na temat deklarowanego elementu.
 - parametry typów
 
 #### TYPÓW
-Adnotacje zastosowania ytpu można umieszczać w nastepujących miejscach:
+Adnotacje zastosowania typu można umieszczać w nastepujących miejscach:
 - w generychnych argumentach typu ```````` List<@NonNull Sting>  ````````
 - w dowolnym miejscu deklaracji tablicy ``````` @NonNull int[] ints ```````
 - w klasach bazowych i implementowanych interfejsach `````` class Warnings extends @Localized Message ``````
@@ -129,13 +129,22 @@ Adnotacje zastosowania ytpu można umieszczać w nastepujących miejscach:
 ## Ustalone adnotacje (standardowe)
 Istnieje zbiór adnotacji w JAVA SE API. Niektóre z nich używane są przez kompilator a niektóre używane są przez inne adnotacje.
 Adnotacje mogą być użyte co do: klasy, pola, metody oraz pozotałych elementów programu (wartości metod)
+
 ````
 @SuppressWarnings
 @Deprecated
 @Override
+@FunctionalInterface
+@SafeVarargs
+@Documented
+@Inherited
+@Native
+@Repeatable
+@Retention
+@Target
 ````
 
-Domyślnie adnotacje nie sa dziedziczone. Należy użyć `````` @Inherited`````` aby mogły byc dziedziczone przez dzieci.
+Domyślnie adnotacje nie sa dziedziczone. Należy użyć `````` @Inherited`````` aby mogły być dziedziczone.
 
 # Zadanie
 Otwórz poniższe pakiety i przeglądnij adnotacje:
