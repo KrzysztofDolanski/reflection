@@ -1,5 +1,6 @@
 package com.epam.dolanski;
 
+import com.epam.dolanski.create_annotation.Anno;
 import com.epam.dolanski.create_annotation.SampleClass;
 import org.testng.annotations.Test;
 
